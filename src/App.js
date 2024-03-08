@@ -6,12 +6,18 @@ import { useState } from 'react';
 
 function App() {
 
+  const [numClics, setNumClics] = useState(0);
+  //^const [valorEstado, actualizarValor] = useState(valorInicial);
+
+
   const manejarClic = () => {
-    console.log('Clic');
+    setNumClics(numClics + 1);
+    // console.log('Clic'); ESTO ES PARA COMPROBAR EN LA CONSOLA QUE SE ESTÉ EJECUTANDO
   }
 
   const reiniciarContador = () => {
-    console.log('Reiniciar');
+    setNumClics();
+    // console.log('Reiniciar'); ESTO ES PARA COMPROBAR EN LA CONSOLA QUE SE ESTÉ EJECUTANDO
   }
 
   return (
@@ -23,7 +29,7 @@ function App() {
         alt='Logo de freeCodeCamp'/>
       </div>
       <div className='contenedor-principal'>
-        <Contador numClics='5' />
+        <Contador numClics={numClics} />
         <Boton 
           texto='Clic'
           esBotonDeClic={true}

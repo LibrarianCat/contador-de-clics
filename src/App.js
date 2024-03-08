@@ -16,7 +16,7 @@ function App() {
   }
 
   const reiniciarContador = () => {
-    setNumClics();
+    setNumClics(0);
     // console.log('Reiniciar'); ESTO ES PARA COMPROBAR EN LA CONSOLA QUE SE ESTÉ EJECUTANDO
   }
 
